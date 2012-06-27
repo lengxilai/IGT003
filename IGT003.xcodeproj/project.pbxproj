@@ -15,7 +15,6 @@
 		D73E394C1590EE2400FED779 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73E394B1590EE2400FED779 /* UIKit.framework */; };
 		D73E394E1590EE2400FED779 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73E394D1590EE2400FED779 /* Foundation.framework */; };
 		D73E39501590EE2400FED779 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D73E394F1590EE2400FED779 /* CoreGraphics.framework */; };
-		D73E39541590EE2400FED779 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D73E39531590EE2400FED779 /* Default.png */; };
 		D73E39561590EE2400FED779 /* fps_images.png in Resources */ = {isa = PBXBuildFile; fileRef = D73E39551590EE2400FED779 /* fps_images.png */; };
 		D73E39581590EE2400FED779 /* Icon-72.png in Resources */ = {isa = PBXBuildFile; fileRef = D73E39571590EE2400FED779 /* Icon-72.png */; };
 		D73E395A1590EE2400FED779 /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = D73E39591590EE2400FED779 /* Icon-Small-50.png */; };
@@ -121,7 +120,66 @@
 		D73E3AA21590EE2600FED779 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E3AA11590EE2600FED779 /* main.m */; };
 		D73E3AA51590EE2600FED779 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E3AA41590EE2600FED779 /* AppDelegate.m */; };
 		D73E3AA81590EE2600FED779 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E3AA71590EE2600FED779 /* RootViewController.m */; };
-		D73E3AAB1590EE2600FED779 /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D73E3AAA1590EE2600FED779 /* HelloWorldLayer.m */; };
+		D77794AC159A152F003B0D22 /* bitmapFont.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D77794AA159A152F003B0D22 /* bitmapFont.fnt */; };
+		D77794AD159A152F003B0D22 /* bitmapFont.png in Resources */ = {isa = PBXBuildFile; fileRef = D77794AB159A152F003B0D22 /* bitmapFont.png */; };
+		D78067FF1594AFC400B60A9F /* MenuBkMusic.caf in Resources */ = {isa = PBXBuildFile; fileRef = D78067FE1594AFC400B60A9F /* MenuBkMusic.caf */; };
+		D78068011594C4BE00B60A9F /* IGGameOptionsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78068001594C4BC00B60A9F /* IGGameOptionsLayer.m */; };
+		D78068031594C74E00B60A9F /* IGGameSettingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78068021594C74D00B60A9F /* IGGameSettingLayer.m */; };
+		D78068051594D50200B60A9F /* IGGameScoresLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78068041594D50100B60A9F /* IGGameScoresLayer.m */; };
+		D78068071594D73A00B60A9F /* IGGameScoresCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D78068061594D73900B60A9F /* IGGameScoresCell.m */; };
+		D78068091594DEB100B60A9F /* IGGameOverLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78068081594DEAF00B60A9F /* IGGameOverLayer.m */; };
+		D781234D159B4C4400C27411 /* futura-48.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D781234B159B4C4400C27411 /* futura-48.fnt */; };
+		D781234E159B4C4400C27411 /* futura-48.png in Resources */ = {isa = PBXBuildFile; fileRef = D781234C159B4C4400C27411 /* futura-48.png */; };
+		D7812351159B4E6E00C27411 /* konqa32.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D781234F159B4E6D00C27411 /* konqa32.fnt */; };
+		D7812352159B4E6E00C27411 /* konqa32.png in Resources */ = {isa = PBXBuildFile; fileRef = D7812350159B4E6E00C27411 /* konqa32.png */; };
+		D7812355159B520900C27411 /* arial16.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D7812353159B520800C27411 /* arial16.fnt */; };
+		D7812356159B520900C27411 /* arial16.png in Resources */ = {isa = PBXBuildFile; fileRef = D7812354159B520900C27411 /* arial16.png */; };
+		D7812359159B54C700C27411 /* konqa32-hd.fnt in Resources */ = {isa = PBXBuildFile; fileRef = D7812357159B54C700C27411 /* konqa32-hd.fnt */; };
+		D781235A159B54C700C27411 /* konqa32-hd.png in Resources */ = {isa = PBXBuildFile; fileRef = D7812358159B54C700C27411 /* konqa32-hd.png */; };
+		D784232B1592155C0013951C /* IGGameStateLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D784232A1592155C0013951C /* IGGameStateLayer.m */; };
+		D784232E159216610013951C /* IGGameMenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D784232D159216610013951C /* IGGameMenuLayer.m */; };
+		D7842334159217760013951C /* ReplaceLayerAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D7842333159217760013951C /* ReplaceLayerAction.m */; };
+		D7842337159218D50013951C /* IGGamePlayingLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D7842336159218D50013951C /* IGGamePlayingLayer.m */; };
+		D784233D15921B070013951C /* IGScoreUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D784233C15921B070013951C /* IGScoreUtil.m */; };
+		D784234015921B3F0013951C /* IGGameMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = D784233F15921B3F0013951C /* IGGameMenu.m */; };
+		D784234315921B820013951C /* IGGameBoard.mm in Sources */ = {isa = PBXBuildFile; fileRef = D784234215921B820013951C /* IGGameBoard.mm */; };
+		D784234A15921BB40013951C /* IGGameTime.m in Sources */ = {isa = PBXBuildFile; fileRef = D784234615921BB40013951C /* IGGameTime.m */; };
+		D784234B15921BB40013951C /* IGGameScore.m in Sources */ = {isa = PBXBuildFile; fileRef = D784234815921BB40013951C /* IGGameScore.m */; };
+		D784234E15921C200013951C /* IGGameFloatingScores.m in Sources */ = {isa = PBXBuildFile; fileRef = D784234D15921C200013951C /* IGGameFloatingScores.m */; };
+		D784235515921CF20013951C /* AboutBg.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235015921CF20013951C /* AboutBg.png */; };
+		D784235615921CF20013951C /* AddButton_p.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235115921CF20013951C /* AddButton_p.png */; };
+		D784235715921CF20013951C /* AddButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235215921CF20013951C /* AddButton.png */; };
+		D784235815921CF20013951C /* Fruits.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235315921CF20013951C /* Fruits.png */; };
+		D784239C15921E050013951C /* bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235915921E040013951C /* bg.png */; };
+		D784239F15921E050013951C /* Board_bg.png in Resources */ = {isa = PBXBuildFile; fileRef = D784235C15921E040013951C /* Board_bg.png */; };
+		D78423A615921E050013951C /* GameOverFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236315921E040013951C /* GameOverFrame.png */; };
+		D78423A815921E050013951C /* GameScoresFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236515921E040013951C /* GameScoresFrame.png */; };
+		D78423A915921E050013951C /* GradeColor.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236615921E040013951C /* GradeColor.png */; };
+		D78423AA15921E050013951C /* GradeFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236715921E040013951C /* GradeFrame.png */; };
+		D78423AC15921E050013951C /* HitNumbers.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236915921E040013951C /* HitNumbers.png */; };
+		D78423AD15921E050013951C /* InputNameFrame.png in Resources */ = {isa = PBXBuildFile; fileRef = D784236A15921E040013951C /* InputNameFrame.png */; };
+		D78423C015921E050013951C /* MergeNumbers.png in Resources */ = {isa = PBXBuildFile; fileRef = D784237D15921E040013951C /* MergeNumbers.png */; };
+		D78423C115921E050013951C /* MinusButton_p.png in Resources */ = {isa = PBXBuildFile; fileRef = D784237E15921E040013951C /* MinusButton_p.png */; };
+		D78423C215921E050013951C /* MinusButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D784237F15921E040013951C /* MinusButton.png */; };
+		D78423C615921E050013951C /* PauseButton_p.png in Resources */ = {isa = PBXBuildFile; fileRef = D784238315921E040013951C /* PauseButton_p.png */; };
+		D78423C715921E050013951C /* PauseButton.png in Resources */ = {isa = PBXBuildFile; fileRef = D784238415921E040013951C /* PauseButton.png */; };
+		D78423D815921E050013951C /* Shot.wav in Resources */ = {isa = PBXBuildFile; fileRef = D784239515921E040013951C /* Shot.wav */; };
+		D78423E615921E5E0013951C /* BallHit.wav in Resources */ = {isa = PBXBuildFile; fileRef = D78423DF15921E5E0013951C /* BallHit.wav */; };
+		D78423E715921E5E0013951C /* ButtonClick.wav in Resources */ = {isa = PBXBuildFile; fileRef = D78423E015921E5E0013951C /* ButtonClick.wav */; };
+		D78423E815921E5E0013951C /* ButtonClick2.wav in Resources */ = {isa = PBXBuildFile; fileRef = D78423E115921E5E0013951C /* ButtonClick2.wav */; };
+		D78423E915921E5E0013951C /* Clear.wav in Resources */ = {isa = PBXBuildFile; fileRef = D78423E215921E5E0013951C /* Clear.wav */; };
+		D78423EA15921E5E0013951C /* FallDown.wav in Resources */ = {isa = PBXBuildFile; fileRef = D78423E315921E5E0013951C /* FallDown.wav */; };
+		D78423EB15921E5E0013951C /* GameBkMusic.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D78423E415921E5E0013951C /* GameBkMusic.mp3 */; };
+		D78423EE15921F3B0013951C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = D78423ED15921F3B0013951C /* Default.png */; };
+		D78423F1159220010013951C /* IGGameNewLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78423F0159220010013951C /* IGGameNewLayer.m */; };
+		D78423FC159220400013951C /* IGGameGradeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78423F31592203E0013951C /* IGGameGradeLayer.m */; };
+		D7842400159220400013951C /* IGGamePauseLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78423FB159220400013951C /* IGGamePauseLayer.m */; };
+		D7842407159220BA0013951C /* IGGameHelpInfoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D7842406159220BA0013951C /* IGGameHelpInfoCell.m */; };
+		D78424101592216E0013951C /* IGGameNumberLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D784240F1592216E0013951C /* IGGameNumberLayer.m */; };
+		D78424211592233B0013951C /* IGGameHelpLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = D78424201592233B0013951C /* IGGameHelpLayer.m */; };
+		D7E6D43D15942B6D00CB2A24 /* IGCommonDefine.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6D43C15942B6D00CB2A24 /* IGCommonDefine.m */; };
+		D7E6D4401594394D00CB2A24 /* IGGameDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6D43F1594394D00CB2A24 /* IGGameDataManager.m */; };
+		D7E6D44315943B3500CB2A24 /* IGGameUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = D7E6D44215943B3500CB2A24 /* IGGameUtil.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -134,7 +192,6 @@
 		D73E394B1590EE2400FED779 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		D73E394D1590EE2400FED779 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D73E394F1590EE2400FED779 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		D73E39531590EE2400FED779 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Default.png; path = Resources/Default.png; sourceTree = "<group>"; };
 		D73E39551590EE2400FED779 /* fps_images.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = fps_images.png; path = Resources/fps_images.png; sourceTree = "<group>"; };
 		D73E39571590EE2400FED779 /* Icon-72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-72.png"; path = "Resources/Icon-72.png"; sourceTree = "<group>"; };
 		D73E39591590EE2400FED779 /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
@@ -357,9 +414,91 @@
 		D73E3AA41590EE2600FED779 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D73E3AA61590EE2600FED779 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		D73E3AA71590EE2600FED779 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
-		D73E3AA91590EE2600FED779 /* HelloWorldLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HelloWorldLayer.h; sourceTree = "<group>"; };
-		D73E3AAA1590EE2600FED779 /* HelloWorldLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HelloWorldLayer.m; sourceTree = "<group>"; };
 		D73E3AAC1590EE2600FED779 /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
+		D77794AA159A152F003B0D22 /* bitmapFont.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = bitmapFont.fnt; sourceTree = "<group>"; };
+		D77794AB159A152F003B0D22 /* bitmapFont.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bitmapFont.png; sourceTree = "<group>"; };
+		D78067FE1594AFC400B60A9F /* MenuBkMusic.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = MenuBkMusic.caf; sourceTree = "<group>"; };
+		D78068001594C4BC00B60A9F /* IGGameOptionsLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameOptionsLayer.m; sourceTree = "<group>"; };
+		D78068021594C74D00B60A9F /* IGGameSettingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameSettingLayer.m; sourceTree = "<group>"; };
+		D78068041594D50100B60A9F /* IGGameScoresLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameScoresLayer.m; sourceTree = "<group>"; };
+		D78068061594D73900B60A9F /* IGGameScoresCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameScoresCell.m; sourceTree = "<group>"; };
+		D78068081594DEAF00B60A9F /* IGGameOverLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameOverLayer.m; sourceTree = "<group>"; };
+		D781234B159B4C4400C27411 /* futura-48.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "futura-48.fnt"; sourceTree = "<group>"; };
+		D781234C159B4C4400C27411 /* futura-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "futura-48.png"; sourceTree = "<group>"; };
+		D781234F159B4E6D00C27411 /* konqa32.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = konqa32.fnt; sourceTree = "<group>"; };
+		D7812350159B4E6E00C27411 /* konqa32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = konqa32.png; sourceTree = "<group>"; };
+		D7812353159B520800C27411 /* arial16.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = arial16.fnt; sourceTree = "<group>"; };
+		D7812354159B520900C27411 /* arial16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arial16.png; sourceTree = "<group>"; };
+		D7812357159B54C700C27411 /* konqa32-hd.fnt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "konqa32-hd.fnt"; sourceTree = "<group>"; };
+		D7812358159B54C700C27411 /* konqa32-hd.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "konqa32-hd.png"; sourceTree = "<group>"; };
+		D78423261592127A0013951C /* IGGameDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameDataManager.h; sourceTree = "<group>"; };
+		D78423291592155C0013951C /* IGGameStateLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameStateLayer.h; sourceTree = "<group>"; };
+		D784232A1592155C0013951C /* IGGameStateLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameStateLayer.m; sourceTree = "<group>"; };
+		D784232C159216610013951C /* IGGameMenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameMenuLayer.h; sourceTree = "<group>"; };
+		D784232D159216610013951C /* IGGameMenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameMenuLayer.m; sourceTree = "<group>"; };
+		D7842332159217760013951C /* ReplaceLayerAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReplaceLayerAction.h; sourceTree = "<group>"; };
+		D7842333159217760013951C /* ReplaceLayerAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReplaceLayerAction.m; sourceTree = "<group>"; };
+		D7842335159218D50013951C /* IGGamePlayingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGamePlayingLayer.h; sourceTree = "<group>"; };
+		D7842336159218D50013951C /* IGGamePlayingLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGamePlayingLayer.m; sourceTree = "<group>"; };
+		D784233B15921B070013951C /* IGScoreUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGScoreUtil.h; sourceTree = "<group>"; };
+		D784233C15921B070013951C /* IGScoreUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGScoreUtil.m; sourceTree = "<group>"; };
+		D784233E15921B3F0013951C /* IGGameMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameMenu.h; sourceTree = "<group>"; };
+		D784233F15921B3F0013951C /* IGGameMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameMenu.m; sourceTree = "<group>"; };
+		D784234115921B820013951C /* IGGameBoard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameBoard.h; sourceTree = "<group>"; };
+		D784234215921B820013951C /* IGGameBoard.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = IGGameBoard.mm; sourceTree = "<group>"; };
+		D784234515921BB40013951C /* IGGameTime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameTime.h; sourceTree = "<group>"; };
+		D784234615921BB40013951C /* IGGameTime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameTime.m; sourceTree = "<group>"; };
+		D784234715921BB40013951C /* IGGameScore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameScore.h; sourceTree = "<group>"; };
+		D784234815921BB40013951C /* IGGameScore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameScore.m; sourceTree = "<group>"; };
+		D784234C15921C200013951C /* IGGameFloatingScores.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameFloatingScores.h; sourceTree = "<group>"; };
+		D784234D15921C200013951C /* IGGameFloatingScores.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameFloatingScores.m; sourceTree = "<group>"; };
+		D784235015921CF20013951C /* AboutBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AboutBg.png; sourceTree = "<group>"; };
+		D784235115921CF20013951C /* AddButton_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddButton_p.png; sourceTree = "<group>"; };
+		D784235215921CF20013951C /* AddButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = AddButton.png; sourceTree = "<group>"; };
+		D784235315921CF20013951C /* Fruits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Fruits.png; sourceTree = "<group>"; };
+		D784235915921E040013951C /* bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bg.png; sourceTree = "<group>"; };
+		D784235C15921E040013951C /* Board_bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Board_bg.png; sourceTree = "<group>"; };
+		D784236315921E040013951C /* GameOverFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameOverFrame.png; sourceTree = "<group>"; };
+		D784236515921E040013951C /* GameScoresFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GameScoresFrame.png; sourceTree = "<group>"; };
+		D784236615921E040013951C /* GradeColor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradeColor.png; sourceTree = "<group>"; };
+		D784236715921E040013951C /* GradeFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = GradeFrame.png; sourceTree = "<group>"; };
+		D784236915921E040013951C /* HitNumbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = HitNumbers.png; sourceTree = "<group>"; };
+		D784236A15921E040013951C /* InputNameFrame.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = InputNameFrame.png; sourceTree = "<group>"; };
+		D784237D15921E040013951C /* MergeNumbers.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MergeNumbers.png; sourceTree = "<group>"; };
+		D784237E15921E040013951C /* MinusButton_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton_p.png; sourceTree = "<group>"; };
+		D784237F15921E040013951C /* MinusButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MinusButton.png; sourceTree = "<group>"; };
+		D784238315921E040013951C /* PauseButton_p.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton_p.png; sourceTree = "<group>"; };
+		D784238415921E040013951C /* PauseButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PauseButton.png; sourceTree = "<group>"; };
+		D784239515921E040013951C /* Shot.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Shot.wav; sourceTree = "<group>"; };
+		D78423DF15921E5E0013951C /* BallHit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = BallHit.wav; sourceTree = "<group>"; };
+		D78423E015921E5E0013951C /* ButtonClick.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick.wav; sourceTree = "<group>"; };
+		D78423E115921E5E0013951C /* ButtonClick2.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = ButtonClick2.wav; sourceTree = "<group>"; };
+		D78423E215921E5E0013951C /* Clear.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = Clear.wav; sourceTree = "<group>"; };
+		D78423E315921E5E0013951C /* FallDown.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = FallDown.wav; sourceTree = "<group>"; };
+		D78423E415921E5E0013951C /* GameBkMusic.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameBkMusic.mp3; sourceTree = "<group>"; };
+		D78423ED15921F3B0013951C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		D78423EF159220010013951C /* IGGameNewLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameNewLayer.h; sourceTree = "<group>"; };
+		D78423F0159220010013951C /* IGGameNewLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameNewLayer.m; sourceTree = "<group>"; };
+		D78423F21592203E0013951C /* IGGameGradeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameGradeLayer.h; sourceTree = "<group>"; };
+		D78423F31592203E0013951C /* IGGameGradeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameGradeLayer.m; sourceTree = "<group>"; };
+		D78423F61592203F0013951C /* IGGameOptionsLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameOptionsLayer.h; sourceTree = "<group>"; };
+		D78423F81592203F0013951C /* IGGameOverLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameOverLayer.h; sourceTree = "<group>"; };
+		D78423FA1592203F0013951C /* IGGamePauseLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGamePauseLayer.h; sourceTree = "<group>"; };
+		D78423FB159220400013951C /* IGGamePauseLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGamePauseLayer.m; sourceTree = "<group>"; };
+		D7842401159220650013951C /* IGGameScoresLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameScoresLayer.h; sourceTree = "<group>"; };
+		D7842405159220BA0013951C /* IGGameHelpInfoCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameHelpInfoCell.h; sourceTree = "<group>"; };
+		D7842406159220BA0013951C /* IGGameHelpInfoCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameHelpInfoCell.m; sourceTree = "<group>"; };
+		D7842408159220ED0013951C /* IGGameSettingLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameSettingLayer.h; sourceTree = "<group>"; };
+		D784240E1592216E0013951C /* IGGameNumberLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameNumberLayer.h; sourceTree = "<group>"; };
+		D784240F1592216E0013951C /* IGGameNumberLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameNumberLayer.m; sourceTree = "<group>"; };
+		D78424111592218F0013951C /* IGGameScoresCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameScoresCell.h; sourceTree = "<group>"; };
+		D784241F1592233B0013951C /* IGGameHelpLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameHelpLayer.h; sourceTree = "<group>"; };
+		D78424201592233B0013951C /* IGGameHelpLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameHelpLayer.m; sourceTree = "<group>"; };
+		D7E6D43B15942B6D00CB2A24 /* IGCommonDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGCommonDefine.h; sourceTree = "<group>"; };
+		D7E6D43C15942B6D00CB2A24 /* IGCommonDefine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGCommonDefine.m; sourceTree = "<group>"; };
+		D7E6D43F1594394D00CB2A24 /* IGGameDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameDataManager.m; sourceTree = "<group>"; };
+		D7E6D44115943B3500CB2A24 /* IGGameUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IGGameUtil.h; sourceTree = "<group>"; };
+		D7E6D44215943B3500CB2A24 /* IGGameUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IGGameUtil.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -416,13 +555,14 @@
 		D73E39511590EE2400FED779 /* IGT003 */ = {
 			isa = PBXGroup;
 			children = (
+				D784232515920F150013951C /* Common */,
+				D784232415920ED10013951C /* Utils */,
+				D784232315920E860013951C /* Config */,
+				D784232215920E6A0013951C /* Layers */,
 				D73E3AA31590EE2600FED779 /* AppDelegate.h */,
 				D73E3AA41590EE2600FED779 /* AppDelegate.m */,
 				D73E3AA61590EE2600FED779 /* RootViewController.h */,
 				D73E3AA71590EE2600FED779 /* RootViewController.m */,
-				D73E3AA91590EE2600FED779 /* HelloWorldLayer.h */,
-				D73E3AAA1590EE2600FED779 /* HelloWorldLayer.m */,
-				D73E3AAC1590EE2600FED779 /* GameConfig.h */,
 				D73E39521590EE2400FED779 /* Resources */,
 				D73E39661590EE2400FED779 /* libs */,
 				D73E3A9F1590EE2600FED779 /* Supporting Files */,
@@ -433,9 +573,12 @@
 		D73E39521590EE2400FED779 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D73E39531590EE2400FED779 /* Default.png */,
+				D77794A8159A1519003B0D22 /* Fonts */,
+				D784232015920E3F0013951C /* Souds */,
+				D784231E15920E150013951C /* Images */,
 				D73E39551590EE2400FED779 /* fps_images.png */,
 				D73E39571590EE2400FED779 /* Icon-72.png */,
+				D78423ED15921F3B0013951C /* Default.png */,
 				D73E39591590EE2400FED779 /* Icon-Small-50.png */,
 				D73E395B1590EE2400FED779 /* Icon-Small.png */,
 				D73E395D1590EE2400FED779 /* Icon-Small@2x.png */,
@@ -758,6 +901,139 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		D77794A8159A1519003B0D22 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D7812357159B54C700C27411 /* konqa32-hd.fnt */,
+				D7812358159B54C700C27411 /* konqa32-hd.png */,
+				D7812353159B520800C27411 /* arial16.fnt */,
+				D7812354159B520900C27411 /* arial16.png */,
+				D781234F159B4E6D00C27411 /* konqa32.fnt */,
+				D7812350159B4E6E00C27411 /* konqa32.png */,
+				D781234B159B4C4400C27411 /* futura-48.fnt */,
+				D781234C159B4C4400C27411 /* futura-48.png */,
+				D77794AA159A152F003B0D22 /* bitmapFont.fnt */,
+				D77794AB159A152F003B0D22 /* bitmapFont.png */,
+			);
+			name = Fonts;
+			sourceTree = "<group>";
+		};
+		D784231E15920E150013951C /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				D784235915921E040013951C /* bg.png */,
+				D784235C15921E040013951C /* Board_bg.png */,
+				D784236315921E040013951C /* GameOverFrame.png */,
+				D784236515921E040013951C /* GameScoresFrame.png */,
+				D784236615921E040013951C /* GradeColor.png */,
+				D784236715921E040013951C /* GradeFrame.png */,
+				D784236915921E040013951C /* HitNumbers.png */,
+				D784236A15921E040013951C /* InputNameFrame.png */,
+				D784237D15921E040013951C /* MergeNumbers.png */,
+				D784237E15921E040013951C /* MinusButton_p.png */,
+				D784237F15921E040013951C /* MinusButton.png */,
+				D784238315921E040013951C /* PauseButton_p.png */,
+				D784238415921E040013951C /* PauseButton.png */,
+				D784235015921CF20013951C /* AboutBg.png */,
+				D784235115921CF20013951C /* AddButton_p.png */,
+				D784235215921CF20013951C /* AddButton.png */,
+				D784235315921CF20013951C /* Fruits.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		D784232015920E3F0013951C /* Souds */ = {
+			isa = PBXGroup;
+			children = (
+				D78067FE1594AFC400B60A9F /* MenuBkMusic.caf */,
+				D78423DF15921E5E0013951C /* BallHit.wav */,
+				D78423E015921E5E0013951C /* ButtonClick.wav */,
+				D78423E115921E5E0013951C /* ButtonClick2.wav */,
+				D78423E215921E5E0013951C /* Clear.wav */,
+				D78423E315921E5E0013951C /* FallDown.wav */,
+				D78423E415921E5E0013951C /* GameBkMusic.mp3 */,
+				D784239515921E040013951C /* Shot.wav */,
+			);
+			name = Souds;
+			sourceTree = "<group>";
+		};
+		D784232215920E6A0013951C /* Layers */ = {
+			isa = PBXGroup;
+			children = (
+				D784234115921B820013951C /* IGGameBoard.h */,
+				D784234215921B820013951C /* IGGameBoard.mm */,
+				D7842335159218D50013951C /* IGGamePlayingLayer.h */,
+				D7842336159218D50013951C /* IGGamePlayingLayer.m */,
+				D784232C159216610013951C /* IGGameMenuLayer.h */,
+				D784232D159216610013951C /* IGGameMenuLayer.m */,
+				D78423291592155C0013951C /* IGGameStateLayer.h */,
+				D784232A1592155C0013951C /* IGGameStateLayer.m */,
+				D784241F1592233B0013951C /* IGGameHelpLayer.h */,
+				D78424201592233B0013951C /* IGGameHelpLayer.m */,
+				D7842408159220ED0013951C /* IGGameSettingLayer.h */,
+				D78068021594C74D00B60A9F /* IGGameSettingLayer.m */,
+				D78423F21592203E0013951C /* IGGameGradeLayer.h */,
+				D78423F31592203E0013951C /* IGGameGradeLayer.m */,
+				D78423F61592203F0013951C /* IGGameOptionsLayer.h */,
+				D78068001594C4BC00B60A9F /* IGGameOptionsLayer.m */,
+				D78068041594D50100B60A9F /* IGGameScoresLayer.m */,
+				D7842401159220650013951C /* IGGameScoresLayer.h */,
+				D78423EF159220010013951C /* IGGameNewLayer.h */,
+				D78423F0159220010013951C /* IGGameNewLayer.m */,
+				D78423FA1592203F0013951C /* IGGamePauseLayer.h */,
+				D78423FB159220400013951C /* IGGamePauseLayer.m */,
+				D78423F81592203F0013951C /* IGGameOverLayer.h */,
+				D78068081594DEAF00B60A9F /* IGGameOverLayer.m */,
+				D784240E1592216E0013951C /* IGGameNumberLayer.h */,
+				D784240F1592216E0013951C /* IGGameNumberLayer.m */,
+			);
+			name = Layers;
+			sourceTree = "<group>";
+		};
+		D784232315920E860013951C /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				D73E3AAC1590EE2600FED779 /* GameConfig.h */,
+			);
+			name = Config;
+			sourceTree = "<group>";
+		};
+		D784232415920ED10013951C /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				D784234D15921C200013951C /* IGGameFloatingScores.m */,
+				D784234C15921C200013951C /* IGGameFloatingScores.h */,
+				D784234515921BB40013951C /* IGGameTime.h */,
+				D784234615921BB40013951C /* IGGameTime.m */,
+				D784234715921BB40013951C /* IGGameScore.h */,
+				D784234815921BB40013951C /* IGGameScore.m */,
+				D7E6D44115943B3500CB2A24 /* IGGameUtil.h */,
+				D7E6D44215943B3500CB2A24 /* IGGameUtil.m */,
+				D7842405159220BA0013951C /* IGGameHelpInfoCell.h */,
+				D7842406159220BA0013951C /* IGGameHelpInfoCell.m */,
+				D784233E15921B3F0013951C /* IGGameMenu.h */,
+				D784233F15921B3F0013951C /* IGGameMenu.m */,
+				D784233B15921B070013951C /* IGScoreUtil.h */,
+				D784233C15921B070013951C /* IGScoreUtil.m */,
+				D78068061594D73900B60A9F /* IGGameScoresCell.m */,
+				D78424111592218F0013951C /* IGGameScoresCell.h */,
+				D7842332159217760013951C /* ReplaceLayerAction.h */,
+				D7842333159217760013951C /* ReplaceLayerAction.m */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		D784232515920F150013951C /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				D7E6D43F1594394D00CB2A24 /* IGGameDataManager.m */,
+				D78423261592127A0013951C /* IGGameDataManager.h */,
+				D7E6D43B15942B6D00CB2A24 /* IGCommonDefine.h */,
+				D7E6D43C15942B6D00CB2A24 /* IGCommonDefine.m */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -808,7 +1084,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D73E39541590EE2400FED779 /* Default.png in Resources */,
 				D73E39561590EE2400FED779 /* fps_images.png in Resources */,
 				D73E39581590EE2400FED779 /* Icon-72.png in Resources */,
 				D73E395A1590EE2400FED779 /* Icon-Small-50.png in Resources */,
@@ -817,6 +1092,42 @@
 				D73E39601590EE2400FED779 /* Icon.png in Resources */,
 				D73E39621590EE2400FED779 /* Icon@2x.png in Resources */,
 				D73E39651590EE2400FED779 /* iTunesArtwork in Resources */,
+				D784235515921CF20013951C /* AboutBg.png in Resources */,
+				D784235615921CF20013951C /* AddButton_p.png in Resources */,
+				D784235715921CF20013951C /* AddButton.png in Resources */,
+				D784235815921CF20013951C /* Fruits.png in Resources */,
+				D784239C15921E050013951C /* bg.png in Resources */,
+				D784239F15921E050013951C /* Board_bg.png in Resources */,
+				D78423A615921E050013951C /* GameOverFrame.png in Resources */,
+				D78423A815921E050013951C /* GameScoresFrame.png in Resources */,
+				D78423A915921E050013951C /* GradeColor.png in Resources */,
+				D78423AA15921E050013951C /* GradeFrame.png in Resources */,
+				D78423AC15921E050013951C /* HitNumbers.png in Resources */,
+				D78423AD15921E050013951C /* InputNameFrame.png in Resources */,
+				D78423C015921E050013951C /* MergeNumbers.png in Resources */,
+				D78423C115921E050013951C /* MinusButton_p.png in Resources */,
+				D78423C215921E050013951C /* MinusButton.png in Resources */,
+				D78423C615921E050013951C /* PauseButton_p.png in Resources */,
+				D78423C715921E050013951C /* PauseButton.png in Resources */,
+				D78423D815921E050013951C /* Shot.wav in Resources */,
+				D78423E615921E5E0013951C /* BallHit.wav in Resources */,
+				D78423E715921E5E0013951C /* ButtonClick.wav in Resources */,
+				D78423E815921E5E0013951C /* ButtonClick2.wav in Resources */,
+				D78423E915921E5E0013951C /* Clear.wav in Resources */,
+				D78423EA15921E5E0013951C /* FallDown.wav in Resources */,
+				D78423EB15921E5E0013951C /* GameBkMusic.mp3 in Resources */,
+				D78423EE15921F3B0013951C /* Default.png in Resources */,
+				D78067FF1594AFC400B60A9F /* MenuBkMusic.caf in Resources */,
+				D77794AC159A152F003B0D22 /* bitmapFont.fnt in Resources */,
+				D77794AD159A152F003B0D22 /* bitmapFont.png in Resources */,
+				D781234D159B4C4400C27411 /* futura-48.fnt in Resources */,
+				D781234E159B4C4400C27411 /* futura-48.png in Resources */,
+				D7812351159B4E6E00C27411 /* konqa32.fnt in Resources */,
+				D7812352159B4E6E00C27411 /* konqa32.png in Resources */,
+				D7812355159B520900C27411 /* arial16.fnt in Resources */,
+				D7812356159B520900C27411 /* arial16.png in Resources */,
+				D7812359159B54C700C27411 /* konqa32-hd.fnt in Resources */,
+				D781235A159B54C700C27411 /* konqa32-hd.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -924,7 +1235,30 @@
 				D73E3AA21590EE2600FED779 /* main.m in Sources */,
 				D73E3AA51590EE2600FED779 /* AppDelegate.m in Sources */,
 				D73E3AA81590EE2600FED779 /* RootViewController.m in Sources */,
-				D73E3AAB1590EE2600FED779 /* HelloWorldLayer.m in Sources */,
+				D784232B1592155C0013951C /* IGGameStateLayer.m in Sources */,
+				D784232E159216610013951C /* IGGameMenuLayer.m in Sources */,
+				D7842334159217760013951C /* ReplaceLayerAction.m in Sources */,
+				D7842337159218D50013951C /* IGGamePlayingLayer.m in Sources */,
+				D784233D15921B070013951C /* IGScoreUtil.m in Sources */,
+				D784234015921B3F0013951C /* IGGameMenu.m in Sources */,
+				D784234315921B820013951C /* IGGameBoard.mm in Sources */,
+				D784234A15921BB40013951C /* IGGameTime.m in Sources */,
+				D784234B15921BB40013951C /* IGGameScore.m in Sources */,
+				D784234E15921C200013951C /* IGGameFloatingScores.m in Sources */,
+				D78423F1159220010013951C /* IGGameNewLayer.m in Sources */,
+				D78423FC159220400013951C /* IGGameGradeLayer.m in Sources */,
+				D7842400159220400013951C /* IGGamePauseLayer.m in Sources */,
+				D7842407159220BA0013951C /* IGGameHelpInfoCell.m in Sources */,
+				D78424101592216E0013951C /* IGGameNumberLayer.m in Sources */,
+				D78424211592233B0013951C /* IGGameHelpLayer.m in Sources */,
+				D7E6D43D15942B6D00CB2A24 /* IGCommonDefine.m in Sources */,
+				D7E6D4401594394D00CB2A24 /* IGGameDataManager.m in Sources */,
+				D7E6D44315943B3500CB2A24 /* IGGameUtil.m in Sources */,
+				D78068011594C4BE00B60A9F /* IGGameOptionsLayer.m in Sources */,
+				D78068031594C74E00B60A9F /* IGGameSettingLayer.m in Sources */,
+				D78068051594D50200B60A9F /* IGGameScoresLayer.m in Sources */,
+				D78068071594D73A00B60A9F /* IGGameScoresCell.m in Sources */,
+				D78068091594DEB100B60A9F /* IGGameOverLayer.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1018,6 +1352,7 @@
 				D73E3AB11590EE2600FED779 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

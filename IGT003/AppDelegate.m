@@ -9,14 +9,30 @@
 #import "cocos2d.h"
 
 #import "AppDelegate.h"
-#import "GameConfig.h"
-#import "HelloWorldLayer.h"
+#import "IGGameMenuLayer.h"
+#import "IGGamePlayingLayer.h"
+#import "ReplaceLayerAction.h"
+#import "IGGameOverLayer.h"
+#import "IGGameHelpLayer.h"
+#import "IGGameOptionsLayer.h"
+#import "IGGameScoresLayer.h"
+#import "IGGameNewLayer.h" 
+#import "IGGamePauseLayer.h"
 #import "RootViewController.h"
+#import "SimpleAudioEngine.h"
 
 @implementation AppDelegate
 
 @synthesize window;
 
+// 取得游戏代理类
++ (AppDelegate*) instance
+{
+	UIApplication* app = [UIApplication sharedApplication];
+	return (AppDelegate*)(app.delegate);
+}
+
+// 这函数什么用啊？不懂
 - (void) removeStartupFlicker
 {
 	//
@@ -40,77 +56,67 @@
 }
 - (void) applicationDidFinishLaunching:(UIApplication*)application
 {
-	// Init the window
+    // Init the window
 	window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-	
-	// Try to use CADisplayLink director
-	// if it fails (SDK < 3.1) use the default director
 	if( ! [CCDirector setDirectorType:kCCDirectorTypeDisplayLink] )
 		[CCDirector setDirectorType:kCCDirectorTypeDefault];
-	
-	
-	CCDirector *director = [CCDirector sharedDirector];
-	
-	// Init the View Controller
-	viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
+    
+    viewController = [[RootViewController alloc] initWithNibName:nil bundle:nil];
 	viewController.wantsFullScreenLayout = YES;
-	
-	//
-	// Create the EAGLView manually
-	//  1. Create a RGB565 format. Alternative: RGBA8
-	//	2. depth format of 0 bit. Use 16 or 24 bit for 3d effects, like CCPageTurnTransition
-	//
+	CCDirector *director = [CCDirector sharedDirector];
+    
 	//
 	EAGLView *glView = [EAGLView viewWithFrame:[window bounds]
 								   pixelFormat:kEAGLColorFormatRGB565	// kEAGLColorFormatRGBA8
 								   depthFormat:0						// GL_DEPTH_COMPONENT16_OES
 						];
-	
-	// attach the openglView to the director
+    // attach the openglView to the director
 	[director setOpenGLView:glView];
-	
-//	// Enables High Res mode (Retina Display) on iPhone 4 and maintains low res on all other devices
-//	if( ! [director enableRetinaDisplay:YES] )
-//		CCLOG(@"Retina Display Not supported");
-	
-	//
-	// VERY IMPORTANT:
-	// If the rotation is going to be controlled by a UIViewController
-	// then the device orientation should be "Portrait".
-	//
-	// IMPORTANT:
-	// By default, this template only supports Landscape orientations.
-	// Edit the RootViewController.m file to edit the supported orientations.
-	//
-#if GAME_AUTOROTATION == kGameAutorotationUIViewController
 	[director setDeviceOrientation:kCCDeviceOrientationPortrait];
-#else
-	[director setDeviceOrientation:kCCDeviceOrientationLandscapeLeft];
-#endif
 	
 	[director setAnimationInterval:1.0/60];
-	[director setDisplayFPS:YES];
+	[director setDisplayFPS:YES];;
 	
-	
-	// make the OpenGLView a child of the view controller
+    // make the OpenGLView a child of the view controller
 	[viewController setView:glView];
 	
 	// make the View Controller a child of the main window
 	[window addSubview: viewController.view];
 	
-	[window makeKeyAndVisible];
 	
 	// Default texture format for PNG/BMP/TIFF/JPEG/GIF images
-	// It can be RGBA8888, RGBA4444, RGB5_A1, RGB565
-	// You can change anytime.
 	[CCTexture2D setDefaultAlphaPixelFormat:kCCTexture2DPixelFormat_RGBA8888];
+    
+    
+	// cocos2d will inherit these values
+	[window setUserInteractionEnabled:YES];
+	
+    // 游戏背景音乐和按钮音效
+    SimpleAudioEngine* engin = [SimpleAudioEngine sharedEngine];
+	[engin preloadBackgroundMusic:@"MenuBkMusic.caf"];
+	[engin preloadEffect:@"ButtonClick.wav"];
+	engin.backgroundMusicVolume = [m_dataManager realMusicVolume];
+	engin.effectsVolume = [m_dataManager realSoundVolume];
+    
+    // 游戏数据初始化
+    m_dataManager = [[IGGameDataManager alloc] init];
+	m_dataManager.mainWindow = window;
+	[m_dataManager load];
+    
+    // 菜单页面生成
+	m_currentScene = [CCScene node];
+	m_currentLayer = [[[IGGameMenuLayer alloc] initWithDataManagerWithAnimate:m_dataManager] autorelease];
+	[m_currentLayer enterLayer];
+	
+    // 背景图片设置
+	CCSprite *bg = [CCSprite spriteWithFile:@"bg.png"];
+	bg.anchorPoint = ccp(0.0, 0.0);
+	[m_currentScene addChild:bg];
+	[m_currentScene addChild:m_currentLayer];
+	
+    [window makeKeyAndVisible];
+	[[CCDirector sharedDirector] runWithScene:m_currentScene];
 
-	
-	// Removes the startup flicker
-	[self removeStartupFlicker];
-	
-	// Run the intro Scene
-	[[CCDirector sharedDirector] runWithScene: [HelloWorldLayer scene]];
 }
 
 
@@ -135,15 +141,10 @@
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
-	CCDirector *director = [CCDirector sharedDirector];
+	[m_currentLayer levelLayer:m_dataManager];
+	[m_dataManager save];
 	
-	[[director openGLView] removeFromSuperview];
-	
-	[viewController release];
-	
-	[window release];
-	
-	[director end];	
+	[[CCDirector sharedDirector] end];
 }
 
 - (void)applicationSignificantTimeChange:(UIApplication *)application {
@@ -151,9 +152,76 @@
 }
 
 - (void)dealloc {
-	[[CCDirector sharedDirector] end];
 	[window release];
+	[m_dataManager release];
+	[[CCDirector sharedDirector] release];
 	[super dealloc];
+}
+
+
+#pragma mark Main menu actions
+
+// 切换游戏页面
+- (void) switchStateLayer:(Class) state reverse:(bool)flag
+{
+	[m_currentLayer levelLayer:m_dataManager];
+	IGGameStateLayer* layer = [[[state alloc] initWithDataManager:m_dataManager] autorelease];
+	ReplaceLayerAction *replaceScreen = 
+	[[[ReplaceLayerAction alloc] initWithScene:m_currentScene layer:layer replaceLayer:m_currentLayer] autorelease];
+	replaceScreen.reverse = flag;
+	[m_currentScene runAction:replaceScreen];
+	
+	m_currentLayer = layer;
+	
+}
+
+// 排行榜
+- (void) startGameScores:(bool)flag
+{
+	[self switchStateLayer:[IGGameScoresLayer class] reverse:flag];
+}
+
+
+// 游戏设置
+- (void) startGameOptions:(bool)flag
+{
+	[self switchStateLayer:[IGGameOptionsLayer class] reverse:flag];
+}
+
+// 暂停
+- (void) startGamePause:(bool)flag
+{
+	[self switchStateLayer:[IGGamePauseLayer class] reverse:flag];
+}
+
+// 帮助
+- (void) startGameHelp:(bool)flag
+{
+	[self switchStateLayer:[IGGameHelpLayer class] reverse:flag];
+}
+
+// 主菜单
+- (void) startMainMenu:(bool)flag
+{
+	[self switchStateLayer:[IGGameMenuLayer class] reverse:flag];
+}
+
+// 开始游戏
+- (void) startStartNewGame:(bool)flag
+{
+	[self switchStateLayer:[IGGamePlayingLayer class] reverse:flag];
+}
+
+// 启动新游戏页面
+- (void) startGameNew:(bool)flag
+{
+	[self switchStateLayer:[IGGameNewLayer class] reverse:flag];
+}
+
+// 游戏结束
+- (void) startGameOver:(bool)flag
+{
+	[self switchStateLayer:[IGGameOverLayer class] reverse:flag];
 }
 
 @end
