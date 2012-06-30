@@ -12,9 +12,9 @@
 #import "IGCommonDefine.h"
 
 // 水果位置做成
-inline static FruitCellPosition Pos_Make(int xIdx, int yIdx)
+inline static FruitCellPosition Pos_Make(int xPos, int yPos)
 {
-	FruitCellPosition pos = { xIdx, yIdx };
+	FruitCellPosition pos = { xPos, yPos };
 	return pos;
 }
 
@@ -25,7 +25,7 @@ inline static void FruitCell_Reset(FruitCell* cell)
 	cell->m_sprite = nil;
 }
 
-// 判断是否是空的
+// 判断是否是空的水果格子
 inline static bool IsBlankFruitsCell(FruitCell* cell)
 {
 	if (cell->m_kindIdx == kKindBlankIndex)
@@ -36,16 +36,16 @@ inline static bool IsBlankFruitsCell(FruitCell* cell)
 	return false;
 }
 
-
 @class IGGamePlayingLayer;
+
 @interface IGGameBoard : CCLayer 
 {
+    // 水果精灵集合
 	CCSpriteBatchNode*	m_ballsManager;
-	CGFloat				m_removeTimeCounter;
-	NSMutableArray*		m_fallingDwonBalls;
-	IGGamePlayingLayer*	m_gamePlayingLayer;
-	int					m_chainTime;
-    
+    // 下落水果集合
+	NSMutableArray*		m_fallingDwonFruits;
+	// 玩家显示界面
+    IGGamePlayingLayer*	m_gamePlayingLayer;    
     // 全部水果列表
     FruitCell			m_FruitCells[kXDirCellNum][kYDirCellNum];
     // 当前点击的水果
@@ -89,27 +89,30 @@ inline static bool IsBlankFruitsCell(FruitCell* cell)
 // 保存游戏数据
 - (void) fillKindData:(GamePlayingData*) data;
 
-// 取得最后一个空格子
-- (int) lastBlankIndex:(int) xIdx;
 // 移除任意位置的水果
 - (void) removeCellxIdx:(int) xIdx yIdx:(int)yIdx;
 - (void) stopTimer;
 - (void) startTimer;
 
 - (void) removePositionArray;
-
+// 填充水果
+- (bool) geningNewFruitAnimate:(ccTime) t;
 // 释放资源
 - (void) clearResoucre;
 // 得分显示
-- (void) playScoresAnimateBaseScore:(int) score chainTime:(int)time;
+- (void) playScoresAnimateBaseScore:(int) score;
 // 消除动画
 - (bool) removingAnimate:(ccTime) t;
 // 下落动画
-- (bool) fallDownAnimate:(ccTime) t;
+- (bool) fallDownAnimate;
 // 清除下落信息
 - (void) clearFallingDownInfo;
 // 下落
 - (bool) downToTopXIdx:(int)xIdx;
 // 游戏结束逻辑
 - (void) addGreyCellxIdx:(int) xIdx yIdx:(int)yIdx;
+// 游戏结束状态设置
+- (void) dealWithGameOver;
+// 游戏结束的时候调用
+- (bool) gameOverAnimate:(ccTime) t;
 @end

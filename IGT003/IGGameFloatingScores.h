@@ -14,8 +14,8 @@
 	CCSpriteBatchNode*		m_spManager;
 }
 
-- (id) initWithBaseScore:(int)score hitTime:(int)time colorIdx:(int)idx;
-+ (id) layerWithBaseScore:(int)score hitTime:(int)time colorIdx:(int)idx;
+- (id) initWithBaseScore:(int)score colorIdx:(int)idx;
++ (id) layerWithBaseScore:(int)score colorIdx:(int)idx;
 
 -(void) setColor:(ccColor3B)color;
 -(ccColor3B) color;

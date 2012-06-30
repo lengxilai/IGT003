@@ -16,7 +16,7 @@ static int s_numbersBeginPos[11] = { 0, 14, 21, 35, 50, 65, 79, 93, 108, 122, 13
 
 @implementation IGGameFloatingScores
 
-- (id) initWithBaseScore:(int)score hitTime:(int)time colorIdx:(int)idx
+- (id) initWithBaseScore:(int)score colorIdx:(int)idx
 {
 	[super init];
     m_spManager = [CCSpriteBatchNode batchNodeWithFile:@"HitNumbers.png"];
@@ -27,15 +27,6 @@ static int s_numbersBeginPos[11] = { 0, 14, 21, 35, 50, 65, 79, 93, 108, 122, 13
 	sprintf(buf, "%d", score);
 	int len = strlen(buf);
 	int totalNumIdx = 0;
-	
-	for (int i = 0; i < len; i++)
-	{
-		numIdxes[totalNumIdx++] = buf[i] - '0';
-	}
-	
-	numIdxes[totalNumIdx++] = 10;
-	sprintf(buf, "%d", time);
-	len = strlen(buf);
 	
 	for (int i = 0; i < len; i++)
 	{
@@ -63,9 +54,9 @@ static int s_numbersBeginPos[11] = { 0, 14, 21, 35, 50, 65, 79, 93, 108, 122, 13
 }
 
 
-+ (id) layerWithBaseScore:(int)score hitTime:(int)time colorIdx:(int)idx
++ (id) layerWithBaseScore:(int)score colorIdx:(int)idx
 {
-	return [[[self alloc] initWithBaseScore:score hitTime:time colorIdx:idx] autorelease];
+	return [[[self alloc] initWithBaseScore:score colorIdx:idx] autorelease];
 }
 
 

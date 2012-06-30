@@ -212,7 +212,6 @@
 {
 	int score = m_gameScore.score;
 	score += addedScore;
-	
 	m_gameScore.score = score;
 }
 

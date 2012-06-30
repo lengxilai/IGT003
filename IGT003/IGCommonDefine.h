@@ -15,6 +15,10 @@
 #define kXDirCellNum	8
 // 水果纵轴最大水果数
 #define kYDirCellNum	8
+// 水果格子的宽和高
+#define kFruitCellW	    38
+// 水果格子的宽和高
+#define kFruitCellH	    38
 // 空水果格子的类型
 #define kKindBlankIndex	-1
 // 每个水果格子的宽度
